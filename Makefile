@@ -8,7 +8,9 @@ RM = rm -f
 OBJDIR = build
 DEPDIR = .deps
 
-CFLAGS = -g -mcpu=cortex-m4 -mthumb -Wall -O0
+INCDIR = -Iapp/inc -Ibsp/inc -Ihal/inc -Ismt32/inc
+
+CFLAGS = -g -mcpu=cortex-m4 -mthumb -Wall -O0 -Ismt32/inc
 LFAGS = -nostdlib -T stm32f411-flash.ld
 DEPFLAGS = -MMD -MP -MF $(DEPDIR)/$*.d
 
