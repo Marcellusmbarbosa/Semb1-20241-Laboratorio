@@ -16,8 +16,9 @@ DEPFLAGS = -MMD -MP -MF $(DEPDIR)/$*.d
 
 SRCS = $(wildcard *.c)
 
-#SRCS = startup.c \
-			 main.c
+SRCS = startup.c \
+			 main.c\
+			 
 #\ faz somente a quebra da linha
 
 #OBJS = $(OBJDIR)/startup.o $(OBJDIR)/main.o

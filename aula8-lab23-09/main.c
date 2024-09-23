@@ -25,9 +25,16 @@
 
 int main(int argc, char *argv[])
 {
-  /* Configura clock e habilita periféricos */
+  uint32_t reg;
+
+  uint32_t configset;
+
+  uint32_t *pRCC_
 
   bsp_init();
+  /*configura pc13 como saida OD pull-up off e pull-down off*/
+
+  configset = (GPIO_PIN13 | GPIO_PORTC | GPIO_OUTPUT | GPIO_OPENDRAIN | GPIO_FLOAT);
 
   /* Executa funcao setup() API do ARDUINO */
 
